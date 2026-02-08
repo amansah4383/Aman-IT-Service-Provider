@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman Service Provider - Professional IT Support & Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            font-size: 2.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 180px 2rem 120px;
+            text-align: center;
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: bottom;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #1e3c72;
+            padding: 16px 45px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            background: #ffd700;
+        }
+
+        .cta-button-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-button-secondary:hover {
+            background: white;
+            color: #1e3c72;
+        }
+
+        /* Quick Contact Bar */
+        .quick-contact {
+            background: #ffd700;
+            padding: 1.5rem 2rem;
+            text-align: center;
+        }
+
+        .quick-contact-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.1rem;
+            color: #1e3c72;
+            font-weight: 600;
+        }
+
+        .contact-item-icon {
+            font-size: 1.5rem;
+        }
+
+        .contact-item a {
+            color: #1e3c72;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #000;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 2rem;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: #1e3c72;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 4rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.4s;
+            border-top: 4px solid #1e3c72;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-top-color: #ffd700;
+        }
+
+        .service-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: #1e3c72;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .service-card ul {
+            list-style: none;
+            margin-top: 1rem;
+            text-align: left;
+        }
+
+        .service-card ul li {
+            padding: 0.5rem 0;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-card ul li::before {
+            content: '✓';
+            color: #1e3c72;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 2rem;
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: #1e3c72;
+            font-weight: 700;
+        }
+
+        .about-text p {
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-box {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .feature-box:hover {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .feature-box .icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-box h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .feature-box p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        /* Why Choose Us */
+        .why-choose {
+            padding: 100px 2rem;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .feature-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-10px);
+        }
+
+        .feature-item .service-icon {
+            font-size: 3rem;
+        }
+
+        .feature-item h3 {
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .feature-item p {
+            opacity: 0.9;
+            font-size: 1.05rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 2rem;
+            background: #f8f9fa;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.7rem;
+            font-weight: 600;
+            color: #333;
+            font-size: 1.05rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #1e3c72;
+        }
+
+        .form-group textarea {
+            height: 140px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 14px 50px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(30,60,114,0.3);
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #1e3c72;
+        }
+
+        .contact-info p {
+            color: #666;
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .info-item {
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: start;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        .info-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .info-icon {
+            font-size: 2rem;
+            color: #1e3c72;
+        }
+
+        .info-details strong {
+            display: block;
+            color: #1e3c72;
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+        }
+
+        .info-details span {
+            color: #666;
+        }
+
+        .info-details a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .info-details a:hover {
+            color: #1e3c72;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 4rem 2rem 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            color: #ffd700;
+            font-size: 1.3rem;
+        }
+
+        .footer-section p {
+            color: #ccc;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .footer-section a:hover {
+            color: #ffd700;
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .quick-contact-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            opacity: 0;
+            pointer-events: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            background: #ffd700;
+            color: #1e3c72;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-icon">💼</span>
+                <span>Aman Service Provider</span>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Quick Contact Bar -->
+    <div class="quick-contact" style="margin-top: 60px;">
+        <div class="quick-contact-content">
+            <div class="contact-item">
+                <span class="contact-item-icon">📱</span>
+                <a href="tel:9372679140">9372679140</a>
+            </div>
+            <div class="contact-item">
+                <span class="contact-item-icon">📧</span>
+                <a href="mailto:amansah4383@gmail.com">amansah4383@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Aman Service Provider</h1>
+            <p class="tagline">Your Trusted IT Support Partner</p>
+            <p>Professional IT services including hardware maintenance, software support, network solutions, and comprehensive technical assistance for your business.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="cta-button">Request Service</a>
+                <a href="#services" class="cta-button cta-button-secondary">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive IT solutions tailored to keep your business running smoothly</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">🖥️</span>
+                    <h3>Hardware Maintenance</h3>
+                    <p>Complete hardware support and maintenance services for all your IT equipment.</p>
+                    <ul>
+                        <li>Desktop & Laptop Repair</li>
+                        <li>Component Replacement</li>
+                        <li>Hardware Upgrades</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">💿</span>
+                    <h3>Software Maintenance</h3>
+                    <p>Expert software installation, updates, and troubleshooting for seamless operations.</p>
+                    <ul>
+                        <li>Software Installation</li>
+                        <li>Regular Updates</li>
+                        <li>Bug Fixes & Patches</li>
+                        <li>License Management</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">🌐</span>
+                    <h3>Network Drive Setup</h3>
+                    <p>Professional network configuration and shared drive setup for better collaboration.</p>
+                    <ul>
+                        <li>Network Configuration</li>
+                        <li>Shared Drive Setup</li>
+                        <li>Access Control</li>
+                        <li>Network Optimization</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">⚙️</span>
+                    <h3>OS Installation</h3>
+                    <p>Fresh operating system installation and configuration for optimal performance.</p>
+                    <ul>
+                        <li>Windows Installation</li>
+                        <li>Linux Setup</li>
+                        <li>Driver Installation</li>
+                        <li>System Configuration</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">🖱️</span>
+                    <h3>Remote Support</h3>
+                    <p>Quick and efficient remote assistance to resolve your technical issues instantly.</p>
+                    <ul>
+                        <li>Remote Troubleshooting</li>
+                        <li>Quick Problem Resolution</li>
+                        <li>Screen Sharing Support</li>
+                        <li>Remote Configuration</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">🚗</span>
+                    <h3>Onsite Support</h3>
+                    <p>Professional on-location technical support for complex issues and installations.</p>
+                    <ul>
+                        <li>On-Location Service</li>
+                        <li>Hardware Installation</li>
+                        <li>Network Setup</li>
+                        <li>Hands-on Troubleshooting</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">💾</span>
+                    <h3>Weekly Basis Backup</h3>
+                    <p>Regular data backup services to ensure your critical information is always protected.</p>
+                    <ul>
+                        <li>Scheduled Backups</li>
+                        <li>Data Protection</li>
+                        <li>Disaster Recovery</li>
+                        <li>Backup Verification</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Aman Service Provider</h2>
+                    <p>Aman Service Provider is your reliable IT support partner, dedicated to delivering professional technical services that keep your business technology running smoothly and efficiently.</p>
+                    <p>We specialize in providing comprehensive IT solutions including hardware and software maintenance, network setup, operating system installation, and both remote and onsite support services.</p>
+                    <p>Our commitment is to ensure your systems are always up and running, with regular backup services to protect your valuable data. We understand the importance of reliable IT infrastructure in today's business environment.</p>
+                </div>
+                <div class="about-features">
+                    <div class="feature-box">
+                        <div class="icon">⚡</div>
+                        <h4>Fast Response</h4>
+                        <p>Quick turnaround on all service requests</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="icon">🎯</div>
+                        <h4>Expert Service</h4>
+                        <p>Professional and skilled technicians</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="icon">💰</div>
+                        <h4>Affordable</h4>
+                        <p>Competitive pricing for quality service</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="icon">🤝</div>
+                        <h4>Reliable</h4>
+                        <p>Trustworthy and dependable support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <p class="section-subtitle">We stand out through our commitment to excellence and customer satisfaction</p>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <span class="service-icon">🔧</span>
+                    <h3>Comprehensive Support</h3>
+                    <p>Complete IT solutions from hardware to software, all under one roof</p>
+                </div>
+                <div class="feature-item">
+                    <span class="service-icon">⏰</span>
+                    <h3>Prompt Service</h3>
+                    <p>Quick response times and efficient problem resolution</p>
+                </div>
+                <div class="feature-item">
+                    <span class="service-icon">🛡️</span>
+                    <h3>Data Security</h3>
+                    <p>Regular backups to keep your data safe and secure</p>
+                </div>
+                <div class="feature-item">
+                    <span class="service-icon">📞</span>
+                    <h3>Flexible Support</h3>
+                    <p>Both remote and onsite assistance as per your needs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Need IT support? Contact us today for professional assistance</p>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" placeholder="Your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Required</label>
+                            <select id="service">
+                                <option value="">Select a service</option>
+                                <option value="hardware">Hardware Maintenance</option>
+                                <option value="software">Software Maintenance</option>
+                                <option value="network">Network Drive Setup</option>
+                                <option value="os">OS Installation</option>
+                                <option value="remote">Remote Support</option>
+                                <option value="onsite">Onsite Support</option>
+                                <option value="backup">Weekly Basis Backup</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" placeholder="Describe your IT issue or requirements..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>We're here to help! Reach out to us for any IT support needs. We provide both remote and onsite assistance.</p>
+                    
+                    <div class="info-item">
+                        <span class="info-icon">📱</span>
+                        <div class="info-details">
+                            <strong>Phone</strong>
+                            <span><a href="tel:9372679140">9372679140</a></span>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <span class="info-icon">📧</span>
+                        <div class="info-details">
+                            <strong>Email</strong>
+                            <span><a href="mailto:amansah4383@gmail.com">amansah4383@gmail.com</a></span>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <span class="info-icon">⏰</span>
+                        <div class="info-details">
+                            <strong>Working Hours</strong>
+                            <span>Monday - Saturday: 9:00 AM - 7:00 PM<br>Sunday: Available for Emergency Support</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">🚀</span>
+                        <div class="info-details">
+                            <strong>Support Types</strong>
+                            <span>Remote Support & Onsite Visits Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Aman Service Provider</h3>
+                <p>Your trusted IT support partner providing comprehensive hardware, software, and network solutions for businesses.</p>
+                <p style="margin-top: 1rem;">
+                    <strong>Contact:</strong><br>
+                    📱 9372679140<br>
+                    📧 amansah4383@gmail.com
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="#services">Hardware Maintenance</a></li>
+                    <li><a href="#services">Software Maintenance</a></li>
+                    <li><a href="#services">Network Drive Setup</a></li>
+                    <li><a href="#services">OS Installation</a></li>
+                    <li><a href="#services">Remote Support</a></li>
+                    <li><a href="#services">Onsite Support</a></li>
+                    <li><a href="#services">Weekly Basis Backup</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#contact">Request Service</a></li>
+                    <li><a href="tel:9372679140">Call Now</a></li>
+                    <li><a href="mailto:amansah4383@gmail.com">Email Us</a></li>
+                </ul>
+                <p style="margin-top: 1.5rem; color: #ffd700;">
+                    <strong>Emergency Support Available</strong>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Aman Service Provider. All rights reserved.</p>
+            <p>Professional IT Support & Solutions</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
+
+    <script>
+        // Scroll to top button visibility
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.querySelector('.scroll-top');
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler (you can customize this)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for contacting Aman Service Provider! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
